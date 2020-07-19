@@ -1,11 +1,14 @@
 const Validator = require("validator");
 const isEmpty = require("is-empty");
 
+// Validate if the inputs on the registration form are valid
 module.exports = function validateRegisterInput(data) {
+    // Store error messages for each input 
+    // Could include name, email, password, password2
     let errors = {};
 
     // If something is inputted, keep data
-    // If the field is empty, convert to string because validator
+    // If the field is empty, convert empty field to string because validator
     // can only check strings 
     data.name = !isEmpty(data.name) ? data.name : "";
     data.email = !isEmpty(data.email) ? data.email : "";
@@ -47,6 +50,6 @@ module.exports = function validateRegisterInput(data) {
 
     return {
         errors, // return errors object
-        isValid: isEmpty(errrors) // if errors object is filled, form is invalid
+        isValid: isEmpty(errors) // if errors object is filled, form is invalid
     }
 }

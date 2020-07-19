@@ -1,7 +1,10 @@
 const Validator = require("validator");
 const isEmpty = require("is-empty");
 
+// Validate if the inputs on the registration form are valid
 module.exports = function validateLoginInput(data) {
+    // Store error messages for each input 
+    // Could include email and password
     let errors = {};
 
     // If something is inputted, keep data
@@ -24,7 +27,7 @@ module.exports = function validateLoginInput(data) {
     }
 
     return {
-        errors, // Return errors object
+        errors: errors, // Return errors object
         isValid: isEmpty(errors) // If errors object is filled, form is not valid
     }
 };
