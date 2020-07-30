@@ -13,7 +13,7 @@
   "author": "Viviana Davila",
   "license": "ISC",
   "dependencies": {
-    "antd": "^4.4.3",
+    "antd": "^4.5.1",
     "bcryptjs": "^2.4.3",
     "body-parser": "^1.19.0",
     "concurrently": "^5.2.0",
